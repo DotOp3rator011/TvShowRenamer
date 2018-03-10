@@ -43,6 +43,7 @@ def rename(showName, seasonNumber, path):
 
 
 if __name__ == "__main__":
+    print("Hello")
     showName = input("Enter the name of the show ")
     seasonNumber = int(input("Enter the season number "))
     path = input("Enter path to the " + showName + " season " + str(seasonNumber) + " folder ")
