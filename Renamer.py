@@ -1,5 +1,5 @@
-import os
 from tvdb_api import Tvdb
+import os
 import re
 
 
@@ -47,4 +47,3 @@ if __name__ == "__main__":
     seasonNumber = int(input("Enter the season number "))
     path = input("Enter path to the " + showName + " season " + str(seasonNumber) + " folder ")
     rename(showName, seasonNumber, path)
-
