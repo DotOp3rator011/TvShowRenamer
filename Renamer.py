@@ -10,8 +10,9 @@ def get_files(path):
 
 def get_episode_number(fileName):
     episodeNumber = None
+    regex = [r'[Ss]..[Ee](..)', r'\dx(\d\d)', r'\d(\d\d)']
     try:
-        episode = re.findall(r'[Ss]..[Ee](..)', fileName)[0]
+        episode = re.findall(regex[0], fileName)[0]
         episodeNumber = int(episode)
     except:
         pass
@@ -46,4 +47,7 @@ if __name__ == "__main__":
     showName = input("Enter the name of the show ")
     seasonNumber = int(input("Enter the season number "))
     path = input("Enter path to the " + showName + " season " + str(seasonNumber) + " folder ")
-    rename(showName, seasonNumber, path)
+    try:
+        rename(showName, seasonNumber, path)
+    except Exception as e:
+        print(e)
