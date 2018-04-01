@@ -3,7 +3,7 @@ Automated way to rename tv show episodes using Tvdb_api. Using regular expressio
 
 # How to use
 
-Run renamer.py from shell
+Run Renamer.py from shell
 
 Example-
 
